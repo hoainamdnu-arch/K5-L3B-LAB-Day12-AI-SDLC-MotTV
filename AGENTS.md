@@ -26,4 +26,15 @@
 - Sáng tạo thêm được khuyến khích nhưng phải tắt ở headless (xem README, mục "Tự do sáng tạo").
 
 ## Skills / hooks của nhóm
-- (Ghi tên và khi nào dùng; tối thiểu 2 skill/hook/command nhóm tự viết, đặt ở `.agents/skills/` hoặc tương đương.)
+Đặt ở `.agents/skills/`. Nhóm MotTV tự viết:
+- **`verify-phase`** (`.agents/skills/verify-phase/`): cổng kiểm **trước khi gắn tag** `phase-n` / release.
+  Chạy `bash .agents/skills/verify-phase/scripts/verify.sh` → chạy Test Contract (headless + unit nhóm),
+  kiểm `check_team`, kiểm `game.contract.json`, smoke CLI; chỉ gắn tag khi **tất cả xanh**.
+- **`add-menu-dish`** (`.agents/skills/add-menu-dish/`): thêm món ăn mới **đúng quy ước** — chỉ sửa dữ liệu
+  trong `game.contract.json`, không hard-code số trong luật; nhắc khi nào là "đổi hợp đồng" (thêm nguyên liệu mới).
+
+## Tiến độ theo phase (cập nhật qua từng phase — lịch sử git cho thấy)
+- **Phase 1:** luật `gather` (oxy/ngạt/choke/faint/giỏ, hái nút, bắt cá) + test. Tag `phase-1`.
+- **Phase 2:** luật `quan` (vòng đời khách, nấu/phục vụ/tiền/boa/uy tín) + test. Tag `phase-2`.
+- **Phase 3:** harness AI của nhóm (2 skill trên), đồ họa/HUD sáng tạo cho cửa sổ chơi thử (tắt ở headless). Tag `phase-3`.
+- **Phase 4:** rà soát, retro, Release `v1.0.0`. Tag `phase-4`.

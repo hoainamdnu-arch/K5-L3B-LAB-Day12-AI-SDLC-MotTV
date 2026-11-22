@@ -27,6 +27,21 @@ Game cần chế độ **headless** theo Test Contract (`python3 -m chonoi.headl
 
 Ngoài phần đề yêu cầu, nhóm được **thêm** nhân vật, loài cá/cây, sinh vật, món, bản đồ, cơ chế, câu chuyện, đồ họa, âm nhạc… với ba điều kiện: **không phá phần cố định** (tắt ở headless), ghi mục **"Sáng tạo của nhóm"** trong README của nhóm, và **làm lõi đúng trước**.
 
+## Nhóm MotTV (bài nộp solo)
+
+Nhóm **MotTV** làm **một mình** (1 thành viên, `team_size = 1`), tự đảm nhiệm mọi vai và module.
+`tools/check_team.py` sẽ **cảnh báo** về số lượng thành viên (CI không chặn) — đã ghi rõ trong [`TEAM.md`](TEAM.md).
+Chi tiết kiểm chứng: `docs/verification/phase-*.md`; giả định do thiếu PRD board: `docs/clarify.md`; nhật ký AI: `docs/ai-usage-log.md`.
+
+### Sáng tạo của nhóm
+> Nguyên tắc: **không phá phần cố định** (chỉ ở cửa sổ chơi thử, **tắt ở headless**), **làm lõi đúng trước**.
+
+- **HUD "Chợ Nổi về đêm"** cho buổi `quan` (`chonoi/web/index.html`): nhãn quán MotTV + đèn lồng 🏮,
+  **xếp hạng sao uy tín** ★, hiển thị **đơn món** và **thanh kiên nhẫn** của từng khách, biểu tượng khách đang ăn.
+  Chỉ là đồ họa trình duyệt — headless không dùng file này nên hợp đồng kiểm thử không đổi.
+- **2 skill harness** cho agent (`.agents/skills/`): `verify-phase` (cổng kiểm trước khi tag) và
+  `add-menu-dish` (thêm món chỉ qua dữ liệu). Xem [`AGENTS.md`](AGENTS.md).
+
 ## Lịch 3 giờ
 
 | Mốc | Phase | Hạn tag |
