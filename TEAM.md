@@ -1,5 +1,4 @@
 # TEAM
-
 **Tên nhóm:** MotTV  **Số người:** 1  (khớp `team_size` trong `game.contract.json`)
 
 > **Ghi chú trung thực:** nhóm **MotTV làm một mình** (1 thành viên), tự đảm nhiệm **tất cả** vai
