@@ -1,21 +1,23 @@
 # TEAM
 
-**Tên nhóm:** …  **Số người:** …  (khớp `team_size` trong `game.contract.json`)
+**Tên nhóm:** MotTV  **Số người:** 1  (khớp `team_size` trong `game.contract.json`)
+
+> **Ghi chú trung thực:** nhóm **MotTV làm một mình** (1 thành viên), tự đảm nhiệm **tất cả** vai
+> (PO, Integrator, QA lead, Scrum/Release) và tất cả module. Vì vậy bảng dưới có 1 dòng thay vì 4–6;
+> `tools/check_team.py` sẽ **cảnh báo** về số lượng (CI chỉ cảnh báo, không chặn) — đây là điều đã biết
+> và chấp nhận cho bài nộp solo.
 
 | Thành viên | GitHub handle | Module chính | Vai quy trình | Người dự phòng cho |
 |---|---|---|---|---|
-| | | `sim/gather` | | |
-| | | `sim/quan` | | |
-| | | `client/ui` | | |
-| | | `qa` | | |
+| Hoài Nam | hoainamdnu-arch | `sim/gather` + `sim/quan` + `qa` | PO · Integrator · QA · Scrum/Release | — (solo) |
 
-**Vai quy trình:** PO (đầu mối hỏi giảng viên, giữ `docs/clarify.md`) · Integrator (giữ `docs/contracts/`, gắn tag) · QA lead · Scrum/Release. Có thể kiêm.
+**Vai quy trình:** PO (đầu mối hỏi giảng viên, giữ `docs/clarify.md`) · Integrator (giữ `docs/contracts/`, gắn tag) · QA lead · Scrum/Release. Một người kiêm hết.
 
-## Thỏa thuận làm việc nhóm (điền trong 15 phút kickoff, ≤ 10 dòng)
+## Thỏa thuận làm việc (solo — tự quản)
 
-- Kênh liên lạc: …
-- Khi bất đồng về thiết kế: … (ví dụ: nói 2 phút, không xong thì Integrator quyết và ghi lại lý do)
-- Khi ai đó trễ hoặc vướng quá 10 phút: … (ví dụ: nói ngay trong kênh, người dự phòng nhận việc)
-- Giờ standup giữa phase: …
-- Cách đọc code của nhau (tùy chọn): … (ví dụ: mỗi người đọc lát kế bên; PR hoặc xem trực tiếp)
-- Cách làm việc với Git: … (ví dụ: push thẳng nhánh chính / nhánh ngắn rồi gộp; thống nhất ai gắn tag)
+- Kênh liên lạc: tự ghi chú trong `docs/standup.md`.
+- Khi bất đồng về thiết kế: ghi lựa chọn + lý do vào `docs/clarify.md` rồi đi tiếp (không ai để tranh luận).
+- Khi vướng quá 10 phút: ghi rõ chỗ kẹt trong `docs/clarify.md`, chọn giả định an toàn nhất, ghi lại.
+- Standup giữa phase: tự điểm lại todo + chạy test trước khi gắn tag.
+- Đọc lại code: tự review diff trước khi commit; mọi commit kèm kết quả test.
+- Git: push thẳng nhánh `main`, chạy test trước khi gắn tag `phase-n`.
